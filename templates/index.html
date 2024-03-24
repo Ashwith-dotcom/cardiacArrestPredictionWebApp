@@ -1,0 +1,96 @@
+<!-- D5EBDA -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Cardiac Arrest Prediction</title>
+</head>
+<body style="background-color:#F8C8DC;">
+    <div class="container mt-5">
+        <div class="d-flex flex-row align-items-center">
+            <h1 class="display-1 text-success">Early Cardiac Arrest Prediction in New Born Babies</h1>
+            <img src="{{url_for('static', filename='/logo.png')}}" width="600" height="400"/>
+        </div>
+        
+        <p class="font-weight-normal" style="color:#AA336A; font-weight: bold;">Enter the Attributes!</p>
+        <form class="row g-3 font-weight-normal" action="/predict" method="post">
+            <div class="col-md-6">
+                <label for="BirthWeight" class="form-label" style="color:#FAF9F6; font-weight: bold;">Birth Weight</label>
+                <input class="form-control" type="text" id="BirthWeight" name="BirthWeight" required>
+            </div>
+            <div class="col-md-6">
+                <label for="FamilyHistory" class="form-label" style="color:#FAF9F6; font-weight: bold;">Family History</label>
+                <input type="text" id="FamilyHistory" name="FamilyHistory" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="PretermBirth" class="form-label" style="color:#FAF9F6; font-weight: bold;">Preterm Birth</label>
+                <input type="text" id="PretermBirth" name="PretermBirth" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="HeartRate" class="form-label" style="color:#FAF9F6; font-weight: bold;">Heart Rate</label>
+                <input type="text" id="HeartRate" name="HeartRate" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="BreathingDifficulty" class="form-label" style="color:#FAF9F6; font-weight: bold;">Breathing Difficulty</label>
+                <input type="text" id="BreathingDifficulty" name="BreathingDifficulty" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="SkinTinge" class="form-label" style="color:#FAF9F6; font-weight: bold;">Skin Tinge</label>
+                <input type="text" id="SkinTinge" name="SkinTinge" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="Responsiveness" class="form-label" style="color:#FAF9F6; font-weight: bold;">Responsiveness</label>
+                <input type="text" id="Responsiveness" name="Responsiveness" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="Movement" class="form-label" style="color:#FAF9F6; font-weight: bold;">Movement</label>
+                <input type="text" id="Movement" name="Movement" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="DeliveryType" class="form-label" style="color:#FAF9F6; font-weight: bold;">Delivery Type</label>
+                <input type="text" id="DeliveryType" name="DeliveryType" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="MothersBPHistory" class="form-label" style="color:#FAF9F6; font-weight: bold;">Mother's BP History</label>
+                <input type="text" id="MothersBPHistory" name="MothersBPHistory" class="form-control" required>
+            </div>
+            <div class="col-md-12" style="margin-bottom: 5em;">
+                <button type="submit" class="btn" style="background-color: #fff; color: #AA336A;">Predict</button>
+            </div>
+        </form>
+        <!-- <form action="/predict" method="post">
+            
+            <label for="BirthWeight">Birth Weight:</label>
+            <input type="text" id="BirthWeight" name="BirthWeight"><br><br>
+            <label for="FamilyHistory">Family History:</label>
+            <input type="text" id="FamilyHistory" name="FamilyHistory"><br><br>
+            <label for="PretermBirth">Preterm Birth:</label>
+            <input type="text" id="PretermBirth" name="PretermBirth"><br><br>
+            <label for="HeartRate">Heart Rate:</label>
+            <input type="text" id="HeartRate" name="HeartRate"><br><br>
+            <label for="BreathingDifficulty">Breathing Difficulty:</label>
+            <input type="text" id="BreathingDifficulty" name="BreathingDifficulty"><br><br>
+            <label for="SkinTinge">Skin Tinge:</label>
+            <input type="text" id="SkinTinge" name="SkinTinge"><br><br>
+            <label for="Responsiveness">Responsiveness:</label>
+            <input type="text" id="Responsiveness" name="Responsiveness"><br><br>
+            <label for="Movement">Movement:</label>
+            <input type="text" id="Movement" name="Movement"><br><br>
+            <label for="DeliveryType">Delivery Type:</label>
+            <input type="text" id="DeliveryType" name="DeliveryType"><br><br>
+            <label for="MothersBPHistory">Mother's BP History:</label>
+            <input type="text" id="MothersBPHistory" name="MothersBPHistory"><br><br>
+            <input type="submit" value="Predict">
+        </form> -->
+    </div>
+    <!-- <div class="mb-3 row"> -->
+    
+    <!-- </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
+
